@@ -175,11 +175,16 @@ fun MainRegister(navComposable: NavController) {
                         color = PadsouGrey,
                         style = captionIntegralBold12,
                     )
-                    Text(
-                        text = "Connecte-toi !",
-                        color = PadsouPurple,
-                        style = captionIntegralBold12,
-                    )
+                    Button(onClick = {
+                        navComposable.navigate("login")
+                    }) {
+                        Text(
+                            text = "Connecte-toi !",
+                            color = PadsouPurple,
+                            style = captionIntegralBold12,
+                        )
+                    }
+
                 }
             }
         }

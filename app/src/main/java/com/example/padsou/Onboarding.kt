@@ -17,6 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.padsou.ui.theme.*
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
@@ -31,7 +32,7 @@ class Onboarding : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    MainOnboarding()
+
                 }
             }
         }
@@ -39,9 +40,8 @@ class Onboarding : ComponentActivity() {
 }
 
 @OptIn(ExperimentalPagerApi::class)
-@Preview
 @Composable
-fun MainOnboarding() {
+fun MainOnboarding(navController: NavController) {
     val pagerState = rememberPagerState()
     Column(
         modifier = Modifier

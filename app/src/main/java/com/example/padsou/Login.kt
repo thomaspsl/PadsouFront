@@ -1,6 +1,7 @@
 package com.example.padsou
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -125,7 +126,9 @@ fun MainLogin(navController: NavController) {
                             .fillMaxWidth()
                     )
                     Button(
-                        onClick = {},
+                        onClick = {
+                                  checkLogin(mail,password,navController)
+                        },
                         colors = ButtonDefaults.buttonColors(backgroundColor = PadsouPurple),
                         shape = RoundedCornerShape(15.dp),
                         modifier = Modifier
@@ -161,5 +164,13 @@ fun MainLogin(navController: NavController) {
                 }
             }
         }
+    }
+}
+
+fun checkLogin( mail:String, password:String,navController: NavController){
+    if(mail == "" || password == ""){
+        navController.navigate("test/4554")
+    }else{
+        navController.navigate("home")
     }
 }
