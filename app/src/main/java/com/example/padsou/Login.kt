@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.padsou.ui.theme.*
 
 class Login : ComponentActivity() {
@@ -23,16 +24,16 @@ class Login : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                 ) {
-                    MainLogin()
+
                 }
             }
         }
     }
 }
 
-@Preview
+
 @Composable
-fun MainLogin() {
+fun MainLogin(navController: NavController) {
 
     var mail by remember {
         mutableStateOf("")

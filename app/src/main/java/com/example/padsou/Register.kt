@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.padsou.ui.theme.*
 
 class Register : ComponentActivity() {
@@ -23,16 +24,16 @@ class Register : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                 ) {
-                    MainRegister()
+
                 }
             }
         }
     }
 }
 
-@Preview
+
 @Composable
-fun MainRegister() {
+fun MainRegister(navComposable: NavController) {
 
     var mail by remember {
         mutableStateOf("")
@@ -144,7 +145,9 @@ fun MainRegister() {
                         style = captionIntegralBold12,
                     )
                     Button(
-                        onClick = {},
+                        onClick = {
+                            navComposable.navigate("home")
+                        },
                         colors = ButtonDefaults.buttonColors(backgroundColor = PadsouPurple),
                         shape = RoundedCornerShape(15.dp),
                         modifier = Modifier
