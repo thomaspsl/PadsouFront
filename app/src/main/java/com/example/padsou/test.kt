@@ -8,8 +8,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
 
 @Composable
@@ -18,7 +16,7 @@ fun Test(id: String?) {
         modifier = Modifier.background(Color.Blue)
     ) {
         Text(text = "Ici on test $id")
-        val db = Firebase.firestore
+        /*val db = Firebase.firestore
 
         db.collection("bon_plan")
             .get()
@@ -30,7 +28,7 @@ fun Test(id: String?) {
             }
             .addOnFailureListener { exception ->
                 Log.d("tag", "Error getting documents: ", exception)
-            }
+            }*/
 
     }
 }
