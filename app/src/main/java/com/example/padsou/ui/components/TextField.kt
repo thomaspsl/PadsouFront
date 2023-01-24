@@ -15,14 +15,17 @@ import com.example.padsou.ui.theme.PadsouTransparent
 import com.example.padsou.ui.theme.PadsouWhite
 
 @Composable
-    fun ShortTextField(placeholder: String, value: String, singleLine: Boolean = true){
+    fun ShortTextField(placeholder: String, onValueChanged: (String) -> Unit, singleLine: Boolean = true){
     // Variables
-    var attribute by remember { mutableStateOf(value) }
+    var attribute by remember { mutableStateOf("") }
 
     // Content
     TextField(
         value = attribute,
-        onValueChange = { newText -> attribute = newText },
+        onValueChange = { newText ->
+            attribute = newText
+            onValueChanged(newText)
+        },
         singleLine = singleLine,
         shape = RoundedCornerShape(15.dp),
         placeholder = {

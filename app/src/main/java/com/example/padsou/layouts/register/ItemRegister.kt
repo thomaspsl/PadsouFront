@@ -16,9 +16,9 @@ import com.example.padsou.ui.theme.*
 @Composable
 fun ItemRegister(navComposable: NavController){
     // Variables
-    val mail by remember { mutableStateOf("") }
-    val password by remember { mutableStateOf("") }
-    val passwordConfirmed by remember { mutableStateOf("") }
+    var mail by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var passwordConfirmed by remember { mutableStateOf("") }
     val authViewModel = viewModel<AuthViewModel>()
 
     // Content
@@ -29,15 +29,21 @@ fun ItemRegister(navComposable: NavController){
             FirstRegister()
             ShortTextField(
                 placeholder = ItemRegisterPlaceholderMail,
-                value = mail,
+                onValueChanged  = { it ->
+                    mail = it
+                }
             )
             ShortTextFieldPassword(
                 placeholder = ItemRegisterPlaceholderPassword,
-                value = password
+                onValueChanged  = { it ->
+                    password = it
+                }
             )
             ShortTextFieldPassword(
                 placeholder = ItemRegisterPlaceholderPasswordC,
-                value = passwordConfirmed
+                onValueChanged  = { it ->
+                    passwordConfirmed = it
+                }
             )
             Text(
                 text = ItemRegisterCaption,

@@ -17,9 +17,9 @@ import kotlinx.coroutines.launch
 fun DescriptionAddPlan(pagerState: PagerState){
     // Variables
     val coroutineScope = rememberCoroutineScope()
-    val title by remember { mutableStateOf("") }
-    val desc by remember { mutableStateOf("") }
-    val link by remember { mutableStateOf("") }
+    var title by remember { mutableStateOf("") }
+    var desc by remember { mutableStateOf("") }
+    var link by remember { mutableStateOf("") }
 
     // Content
     Text(
@@ -32,7 +32,9 @@ fun DescriptionAddPlan(pagerState: PagerState){
     )
     ShortTextField(
         placeholder = LastAddPlanPlaceholderTitle,
-        value = title
+        onValueChanged  = { it ->
+            title = it
+        }
     )
     Text(
         text = LastAddPlanLabelDesc,
@@ -43,7 +45,9 @@ fun DescriptionAddPlan(pagerState: PagerState){
     )
     ShortTextField(
         placeholder = LastAddPlanPlaceholderDesc,
-        value = desc,
+        onValueChanged  = { it ->
+            desc = it
+        },
         singleLine = false
     )
     Text(
@@ -55,7 +59,9 @@ fun DescriptionAddPlan(pagerState: PagerState){
     )
     ShortTextField(
         placeholder = LastAddPlanPlaceholderLien,
-        value = link
+        onValueChanged  = { it ->
+            link = it
+        }
     )
     ShortButton(
         textButton = LastAddPlanFirstButton,

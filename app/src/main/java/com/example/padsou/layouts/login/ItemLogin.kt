@@ -1,5 +1,6 @@
 package com.example.padsou.layouts.login
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
@@ -17,8 +18,8 @@ import com.example.padsou.ui.theme.*
 @Composable
 fun ItemLogin(navComposable: NavController){
     // Variables
-    val mail by remember { mutableStateOf("") }
-    val password by remember { mutableStateOf("") }
+    var mail by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
     val authViewModel = viewModel<AuthViewModel>()
 
     // Content
@@ -29,11 +30,15 @@ fun ItemLogin(navComposable: NavController){
             FirstLogin()
             ShortTextField(
                 placeholder = ItemLoginPlaceholderMail,
-                value = mail
+                onValueChanged  = { it ->
+                    mail = it
+                }
             )
             ShortTextFieldPassword(
                 placeholder = ItemLoginPlaceholderPassword,
-                value = password
+                onValueChanged  = { it ->
+                    password = it
+                }
             )
             Text(
                 text = ItemLoginPasswordForgot,
@@ -48,7 +53,8 @@ fun ItemLogin(navComposable: NavController){
                 textButton = ItemLoginButton,
                 color = PadsouPurple,
                 routeDirection = {
-                    authViewModel.login(mail,password, navComposable)
+                    Log.d("mail",mail)
+                    authViewModel.login(mail, password, navComposable)
                 }
             )
         }

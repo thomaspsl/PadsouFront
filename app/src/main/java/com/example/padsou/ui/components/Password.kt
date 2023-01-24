@@ -21,19 +21,22 @@ import com.example.padsou.ui.theme.PadsouTransparent
 import com.example.padsou.ui.theme.PadsouWhite
 
 @Composable
-fun ShortTextFieldPassword(placeholder: String, value: String){
+fun ShortTextFieldPassword(placeholder: String, onValueChanged: (String) -> Unit){
     // Variables
-    var password by remember { mutableStateOf(value) }
+    var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
 
     // Content
     TextField(
         value = password,
-        onValueChange = { newText -> password = newText },
         singleLine = true,
         visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
         shape = RoundedCornerShape(15.dp),
+        onValueChange = { newText ->
+            password = newText
+            onValueChanged(newText)
+        },
         placeholder = {
             Text(
                 text = placeholder,
