@@ -1,9 +1,7 @@
 package com.example.padsou
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -11,29 +9,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.padsou.ui.theme.*
 
-class Register : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            PadsouTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                ) {
-
-                }
-            }
-        }
-    }
-}
-
-
 @Composable
-fun MainRegister(navComposable: NavController) {
+fun MainRegister(/*navComposable: NavController*/) {
 
     var mail by remember {
         mutableStateOf("")
@@ -79,6 +60,7 @@ fun MainRegister(navComposable: NavController) {
                     TextField(
                         value = mail,
                         onValueChange = { newText -> mail = newText },
+                        singleLine = true,
                         placeholder = {
                             Text(
                                 "Ton adresse e-mail",
@@ -98,6 +80,7 @@ fun MainRegister(navComposable: NavController) {
                     TextField(
                         value = password,
                         onValueChange = { newText -> password = newText },
+                        singleLine = true,
                         placeholder = {
                             Text(
                                 "Ton mot de passe",
@@ -118,6 +101,7 @@ fun MainRegister(navComposable: NavController) {
                     TextField(
                         value = passwordConfirmed,
                         onValueChange = { newText -> passwordConfirmed = newText },
+                        singleLine = true,
                         placeholder = {
                             Text(
                                 "Confirme ton mot de passe",
@@ -142,12 +126,10 @@ fun MainRegister(navComposable: NavController) {
                     Text(
                         text = "En t’inscrivant, tu acceptes les Conditions générales d’utilisation de Padsou",
                         color = PadsouGrey,
-                        style = captionIntegralBold12,
+                        style = CaptionIntegralBold12,
                     )
                     Button(
-                        onClick = {
-                            navComposable.navigate("home")
-                        },
+                        onClick = { /*navComposable.navigate("home")*/ },
                         colors = ButtonDefaults.buttonColors(backgroundColor = PadsouPurple),
                         shape = RoundedCornerShape(15.dp),
                         modifier = Modifier
@@ -155,7 +137,7 @@ fun MainRegister(navComposable: NavController) {
                             .padding(top = 15.dp)
                     ) {
                         Text(
-                            "SE CONNECTER",
+                            "Se connecter",
                             color = Color.White,
                             style = ButtonIntegralBold15,
                             modifier = Modifier
@@ -173,12 +155,14 @@ fun MainRegister(navComposable: NavController) {
                     Text(
                         text = "Déjà un compte ? ",
                         color = PadsouGrey,
-                        style = captionIntegralBold12,
+                        style = CaptionIntegralBold12,
                     )
                     Text(
                         text = "Connecte-toi !",
                         color = PadsouPurple,
-                        style = captionIntegralBold12,
+                        style = CaptionIntegralBold12,
+                        modifier = Modifier
+                            .clickable { /*navComposable.navigate("login")*/ }
                     )
                 }
             }

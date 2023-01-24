@@ -1,9 +1,7 @@
 package com.example.padsou
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -16,24 +14,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.padsou.ui.theme.*
 
-class Login : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            PadsouTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                ) {
-
-                }
-            }
-        }
-    }
-}
-
-
 @Composable
-fun MainLogin(navController: NavController) {
+@Preview
+fun MainLogin(/*navComposable: NavController*/) {
 
     var mail by remember {
         mutableStateOf("")
@@ -50,7 +33,8 @@ fun MainLogin(navController: NavController) {
             verticalArrangement = Arrangement.SpaceBetween,
             modifier = Modifier
                 .fillMaxHeight()
-                .padding(start = 26.dp, top = 75.dp, end = 26.dp, bottom = 55.dp)) {
+                .padding(start = 26.dp, top = 75.dp, end = 26.dp, bottom = 55.dp)
+        ){
             Row() {
                 Column() {
                     Text(
@@ -76,6 +60,7 @@ fun MainLogin(navController: NavController) {
                     TextField(
                         value = mail,
                         onValueChange = { newText -> mail = newText },
+                        singleLine = true,
                         placeholder = {
                             Text(
                                 "Ton adresse e-mail",
@@ -95,6 +80,7 @@ fun MainLogin(navController: NavController) {
                     TextField(
                         value = password,
                         onValueChange = { newText -> password = newText },
+                        singleLine = true,
                         placeholder = {
                             Text(
                                 "Ton mot de passe",
@@ -120,12 +106,12 @@ fun MainLogin(navController: NavController) {
                         text = "Mot de passe oublié ?",
                         color = PadsouGrey,
                         textAlign = TextAlign.End,
-                        style = captionIntegralBold12,
+                        style = CaptionIntegralBold12,
                         modifier = Modifier
                             .fillMaxWidth()
                     )
                     Button(
-                        onClick = {},
+                        onClick = { /*navComposable.navigate("home")*/ },
                         colors = ButtonDefaults.buttonColors(backgroundColor = PadsouPurple),
                         shape = RoundedCornerShape(15.dp),
                         modifier = Modifier
@@ -133,7 +119,7 @@ fun MainLogin(navController: NavController) {
                             .padding(top = 15.dp)
                     ) {
                         Text(
-                            "SE CONNECTER",
+                            "Se connecter",
                             color = Color.White,
                             style = ButtonIntegralBold15,
                             modifier = Modifier
@@ -151,13 +137,15 @@ fun MainLogin(navController: NavController) {
                     Text(
                         text = "Pas encore inscrit ? ",
                         color = PadsouGrey,
-                        style = captionIntegralBold12,
+                        style = CaptionIntegralBold12,
                     )
                     Text(
                         text = "Allez viens !",
                         color = PadsouPurple,
-                        style = captionIntegralBold12,
-                    )
+                        style = CaptionIntegralBold12,
+                        modifier = Modifier
+                            .clickable { /*navComposable.navigate("register")*/ }
+                        )
                 }
             }
         }
