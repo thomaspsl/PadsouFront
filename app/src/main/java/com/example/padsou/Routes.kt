@@ -14,7 +14,7 @@ fun Routes(){
     val systemController = rememberSystemUiController()
 
     // Routes
-    NavHost(navController = navController, startDestination = "onboarding") {
+    NavHost(navController = navController, startDestination = "home") {
         composable("onboarding") { MainOnboarding(systemController, navController) }
         composable("register") { MainRegister(systemController, navController) }
         composable("login") { MainLogin(systemController, navController) }
