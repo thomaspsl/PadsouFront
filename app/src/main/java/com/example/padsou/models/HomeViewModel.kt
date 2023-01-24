@@ -1,4 +1,4 @@
-package com.example.padsou.Models
+package com.example.padsou.models
 
 import android.annotation.SuppressLint
 import android.util.Log
@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.padsou.data.Category
 import com.example.padsou.data.Tips
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObjects
 import com.google.firebase.ktx.Firebase
@@ -63,7 +61,7 @@ class HomeViewModel: ViewModel() {
             db.collection("plan")
                 .add(newTips)
             .addOnSuccessListener{
-                navController.navigate("login")
+                navController.navigate("home")
             }
                 .addOnFailureListener{
                     Log.d("error",it.localizedMessage)

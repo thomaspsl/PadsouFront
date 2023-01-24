@@ -2,13 +2,18 @@ package com.example.padsou.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
-val PadsouPurple = Color(0xff5F67EA)
+val PadsouSalmon = Color(0xffF4696A)
 val PadsouPink = Color(0xffF9709C)
-val PadsouWhite = Color(0xffF7F7F7)
+val PadsouBlue = Color(0xff579BFE)
+val PadsouLightPurple = Color(0xff7C8CF9)
+val PadsouPurple = Color(0xff5F67EA)
+val PadsouDarkPurple = Color(0xff393145)
+
+val PadsouWhite = Color(0xffFFFFFF)
+val PadsouWheat = Color(0xffF7F7F7)
 val PadsouLightGrey = Color(0xffA6A6A6)
 val PadsouGrey = Color(0xff747685)
-val PadsouDarkGrey = Color(0xff393145)
+val PadsouDark = Color(0xff1B191A)
+val PadsouBlack = Color(0xff000000)
+
+val PadsouTransparent = Color(0x00000000)

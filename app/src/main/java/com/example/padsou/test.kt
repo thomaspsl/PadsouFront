@@ -1,7 +1,5 @@
 package com.example.padsou.ui.theme
 
-import android.app.Activity
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,9 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.example.padsou.Models.AuthViewModel
-import com.example.padsou.Models.HomeViewModel
-import com.example.padsou.data.Category
+import com.example.padsou.models.HomeViewModel
 import com.example.padsou.data.Tips
 
 

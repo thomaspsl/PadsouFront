@@ -33,6 +33,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
     }
     buildFeatures {
         compose true
@@ -67,11 +68,9 @@ dependencies {
 
     implementation "com.google.accompanist:accompanist-pager:0.25.0"
     implementation "com.google.accompanist:accompanist-pager-indicators:0.25.0"
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.25.0"
 
     implementation platform('com.google.firebase:firebase-bom:31.1.1')
     implementation 'com.google.firebase:firebase-firestore-ktx'
-
     implementation 'com.google.firebase:firebase-auth-ktx'
-
-
 }
