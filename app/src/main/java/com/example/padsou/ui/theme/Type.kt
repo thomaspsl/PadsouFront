@@ -4,7 +4,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-// Set of Material typography styles to start with
 val TitleIntegralBold29 = TextStyle(
     fontFamily = fontsIntegralCF,
     fontWeight = FontWeight.Bold,
@@ -30,8 +29,23 @@ val TitleInterRegular20 = TextStyle(
     fontWeight = FontWeight.SemiBold,
     fontSize = 20.sp,
 )
-val captionIntegralBold12 = TextStyle(
+val CaptionIntegralBold12 = TextStyle(
     fontFamily = fontsInter,
     fontWeight = FontWeight.Bold,
     fontSize = 12.sp,
+)
+val LabelIntegralExtraBold14 = TextStyle(
+    fontFamily = fontsIntegralCF,
+    fontWeight = FontWeight.ExtraBold,
+    fontSize = 14.sp,
+)
+val LabelIntegralBold14 = TextStyle(
+    fontFamily = fontsIntegralCF,
+    fontWeight = FontWeight.Medium,
+    fontSize = 12.sp,
+)
+val LabelIntegralExtraBold11 = TextStyle(
+    fontFamily = fontsIntegralCF,
+    fontWeight = FontWeight.ExtraBold,
+    fontSize = 11.sp,
 )

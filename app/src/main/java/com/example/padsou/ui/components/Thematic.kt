@@ -20,7 +20,7 @@ import com.example.padsou.ui.theme.LabelIntegralExtraBold11
 import com.example.padsou.ui.theme.PadsouWhite
 
 @Composable
-fun ShortMiniThematicCard(color: Color, icon: ImageVector, text: String){
+fun ShortThematicCard(color: Color, icon: ImageVector, text: String){
     // Variables
 
     // Content

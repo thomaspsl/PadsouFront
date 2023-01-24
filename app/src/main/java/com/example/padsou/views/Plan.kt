@@ -1,4 +1,4 @@
-package com.example.padsou
+package com.example.padsou.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -18,68 +18,24 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.padsou.R
+import com.example.padsou.layouts.plan.LastPlan
+import com.example.padsou.ui.components.ShortButton
 import com.example.padsou.ui.theme.*
+import com.google.accompanist.systemuicontroller.SystemUiController
 
 @Composable
-@Preview
-fun MainPlan() {
+fun MainPlan(systemController: SystemUiController, ) {
+    // Variables
+
+    // Content
     Column(
         modifier = Modifier
-            .background(PadsouWhite)
-            .fillMaxHeight()
-            .fillMaxWidth()
+            .background(PadsouWheat)
+            .fillMaxSize()
     ){
-        Column() {
-            Box(
-                contentAlignment = Alignment.Center,
-                modifier = Modifier
-                    .clip(shape = RoundedCornerShape(bottomStart = 35.dp, bottomEnd = 35.dp))
-                    .height(250.dp)
-                    .fillMaxWidth()
-            ){
-                Image(
-                    painter = painterResource(id = R.drawable.tacos),
-                    contentDescription = "tacos",
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .drawWithCache {
-                            val gradient = Brush.horizontalGradient(
-                                colors = listOf(Color.Transparent, Color.DarkGray),
-                                startX = size.width,
-                                endX = 0.0F,
-                            )
-                            onDrawWithContent {
-                                drawContent()
-                                drawRect(
-                                    gradient,
-                                    blendMode = BlendMode.Multiply
-                                )
-                            }
-                        }
-                )
-                Column(
-                    modifier = Modifier
-                        .padding(start = 50.dp, end = 50.dp)
-                ) {
-                    Text(
-                        text = "Abonnement 1 an",
-                        color = Color.White,
-                        style = TitleIntegralBold27,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                    )
-                    Text(
-                        text = "2 mois offerts",
-                        color = Color.White,
-                        style = CaptionInterMedium15,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                    )
-                }
-            }
-        }
-        Column(
+
+        Row(
             modifier = Modifier
                 .padding(start = 26.dp, top = 25.dp, end = 26.dp, bottom = 35.dp)
         ) {
@@ -104,30 +60,7 @@ fun MainPlan() {
             )
         }
 
-        // Bottom
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Bottom,
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(start = 26.dp, top = 25.dp, end = 26.dp, bottom = 35.dp)
-        ) {
-            Button(
-                onClick = { },
-                colors = ButtonDefaults.buttonColors(backgroundColor = PadsouPurple),
-                shape = RoundedCornerShape(15.dp),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 15.dp)
-            ) {
-                Text(
-                    "Profiter de l'offre",
-                    color = Color.White,
-                    style = ButtonIntegralBold15,
-                    modifier = Modifier
-                        .padding(top = 6.dp, bottom = 6.dp)
-                )
-            }
-        }
+
+        LastPlan()
     }
 }
