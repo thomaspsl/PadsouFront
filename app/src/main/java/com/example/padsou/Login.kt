@@ -14,8 +14,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.example.padsou.Models.AuthViewModel
 import com.example.padsou.ui.theme.*
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 class Login : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +45,8 @@ fun MainLogin(navController: NavController) {
     var password by remember {
         mutableStateOf("")
     }
+
+    val authViewModel = viewModel<AuthViewModel>()
 
     Column(
         modifier = Modifier
@@ -127,7 +132,7 @@ fun MainLogin(navController: NavController) {
                     )
                     Button(
                         onClick = {
-                                  checkLogin(mail,password,navController)
+                            authViewModel.login(mail,password, navController)
                         },
                         colors = ButtonDefaults.buttonColors(backgroundColor = PadsouPurple),
                         shape = RoundedCornerShape(15.dp),
@@ -167,10 +172,4 @@ fun MainLogin(navController: NavController) {
     }
 }
 
-fun checkLogin( mail:String, password:String,navController: NavController){
-    if(mail == "" || password == ""){
-        navController.navigate("test/4554")
-    }else{
-        navController.navigate("home")
-    }
-}
+

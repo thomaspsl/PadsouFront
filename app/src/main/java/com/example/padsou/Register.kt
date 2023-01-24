@@ -13,7 +13,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.example.padsou.Models.AuthViewModel
 import com.example.padsou.ui.theme.*
 
 class Register : ComponentActivity() {
@@ -33,7 +35,7 @@ class Register : ComponentActivity() {
 
 
 @Composable
-fun MainRegister(navComposable: NavController) {
+fun MainRegister(navController: NavController) {
 
     var mail by remember {
         mutableStateOf("")
@@ -45,6 +47,7 @@ fun MainRegister(navComposable: NavController) {
         mutableStateOf("")
     }
 
+    val authViewModel = viewModel<AuthViewModel>()
     Column(
         modifier = Modifier
             .background(PadsouWhite)
@@ -146,7 +149,12 @@ fun MainRegister(navComposable: NavController) {
                     )
                     Button(
                         onClick = {
-                            navComposable.navigate("home")
+                            if(password == passwordConfirmed){
+                                authViewModel.register(mail,password, navController)
+                            }else{
+                                navController.navigate("inscription")
+                            }
+
                         },
                         colors = ButtonDefaults.buttonColors(backgroundColor = PadsouPurple),
                         shape = RoundedCornerShape(15.dp),
@@ -176,7 +184,7 @@ fun MainRegister(navComposable: NavController) {
                         style = captionIntegralBold12,
                     )
                     Button(onClick = {
-                        navComposable.navigate("login")
+                        navController.navigate("login")
                     }) {
                         Text(
                             text = "Connecte-toi !",

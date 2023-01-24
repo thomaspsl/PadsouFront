@@ -13,7 +13,7 @@ fun MainNav(){
         composable("inscription") { MainRegister(navController) }
         composable("login") { MainLogin(navController) }
         composable("home") { MainOnboarding(navController) }
-        composable("test") { Test(id = "12") }
+        composable("test") { Test(id = "12",navController) }
 
         /*composable("test/{userId}") { backStackEntry ->
             Test(backStackEntry.arguments?.getString("userId"))

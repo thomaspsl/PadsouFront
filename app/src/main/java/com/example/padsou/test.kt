@@ -1,36 +1,42 @@
 package com.example.padsou.ui.theme
 
-import android.content.ContentValues.TAG
+import android.app.Activity
 import android.util.Log
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
+import com.example.padsou.Models.AuthViewModel
+import com.example.padsou.Models.HomeViewModel
+import com.example.padsou.data.Category
+import com.example.padsou.data.Tips
 
 
 @Composable
-fun Test(id: String?) {
+fun Test(id: String?,navController:NavController) {
     Row(
         modifier = Modifier.background(Color.Blue)
     ) {
-        Text(text = "Ici on test $id")
-        val db = Firebase.firestore
+        val viewModel = viewModel<HomeViewModel>()
+        val category: State<List<Tips>> = viewModel.tips.collectAsState()
+        //viewModel.addTips("ou on tire sur des gens","tire.png","shoot.fr","shoot",navController)
 
-        db.collection("bon_plan")
-            .get()
-            .addOnSuccessListener { result ->
-                Log.d("tag", "docsss")
-                for (document in result) {
-                    Log.d("tag", "${document.id} => ${document.data}")
-                }
+        Column() {
+            Text(text = "test")
+
+            for(r in category.value){
+                Text(text = r.titre)
+
             }
-            .addOnFailureListener { exception ->
-                Log.d("tag", "Error getting documents: ", exception)
-            }
+        }
+
 
     }
 }
