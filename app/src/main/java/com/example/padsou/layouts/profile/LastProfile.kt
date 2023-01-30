@@ -1,4 +1,4 @@
-package com.example.padsou.layouts.addPlan.template
+package com.example.padsou.layouts.profile
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
@@ -8,37 +8,32 @@ import androidx.compose.ui.unit.dp
 import com.example.padsou.ui.components.ShortButton
 import com.example.padsou.ui.components.ShortTextField
 import com.example.padsou.ui.theme.*
-import com.google.accompanist.pager.ExperimentalPagerApi
-import com.google.accompanist.pager.PagerState
-import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalPagerApi::class)
 @Composable
-fun DescriptionAddPlan(pagerState: PagerState){
+fun LastProfile(){
     // Variables
-    val coroutineScope = rememberCoroutineScope()
-    var title by remember { mutableStateOf("") }
-    var desc by remember { mutableStateOf("") }
-    var link by remember { mutableStateOf("") }
+    var pseudo by remember { mutableStateOf("") }
+    var mail by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
 
     // Content
     Column() {
         Text(
-            text = LastAddPlanLabelTitle,
+            text = LastProfileLabelPseudo,
             color = PadsouDark,
             style = LabelIntegralExtraBold14,
             modifier = Modifier
-                .padding(top = 30.dp, bottom = 7.dp)
                 .fillMaxWidth()
+                .padding(top = 30.dp, bottom = 7.dp)
         )
         ShortTextField(
-            placeholder = LastAddPlanPlaceholderTitle,
+            placeholder = "jacky74bonplan",
             onValueChanged  = { it ->
-                title = it
+                pseudo = it
             }
         )
         Text(
-            text = LastAddPlanLabelDesc,
+            text = LastProfileLabelMail,
             color = PadsouDark,
             style = LabelIntegralExtraBold14,
             modifier = Modifier
@@ -46,14 +41,13 @@ fun DescriptionAddPlan(pagerState: PagerState){
                 .padding(top = 15.dp, bottom = 7.dp)
         )
         ShortTextField(
-            placeholder = LastAddPlanPlaceholderDesc,
+            placeholder = "jacky@gmail.com",
             onValueChanged  = { it ->
-                desc = it
+                mail = it
             },
-            singleLine = false
         )
         Text(
-            text = LastAddPlanLabelLien,
+            text = LastProfileLabelPassword,
             color = PadsouDark,
             style = LabelIntegralExtraBold14,
             modifier = Modifier
@@ -61,17 +55,17 @@ fun DescriptionAddPlan(pagerState: PagerState){
                 .padding(top = 15.dp, bottom = 7.dp)
         )
         ShortTextField(
-            placeholder = LastAddPlanPlaceholderLien,
+            placeholder = "*******************",
             onValueChanged  = { it ->
-                link = it
+                password = it
             }
         )
     }
     Column() {
         ShortButton(
-            textButton = LastAddPlanFirstButton,
+            textButton = LastProfileButton,
             color = PadsouPurple,
-            routeDirection = { coroutineScope.launch { pagerState.animateScrollToPage(page = pagerState.currentPage + 1) } }
+            routeDirection = { }
         )
     }
 }

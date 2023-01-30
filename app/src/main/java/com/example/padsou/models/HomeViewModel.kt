@@ -40,6 +40,7 @@ class HomeViewModel: ViewModel() {
     private fun getCategorie() {
         val db = Firebase.firestore
         db.collection("categorie")
+            .orderBy("order")
             .get()
             .addOnSuccessListener { result ->
                 _categorie.value = result.toObjects()
@@ -51,7 +52,7 @@ class HomeViewModel: ViewModel() {
 
      @SuppressLint("SuspiciousIndentation")
      fun addTips(description:String = "", image:String = "", lien:String = "", titre:String ="", navController: NavController){
-        val newTips = Tips(description,image,titre,lien,"123")
+         val newTips = Tips(description,image,titre,lien,"123")
          val db = Firebase.firestore
 
             db.collection("plan")
@@ -60,7 +61,7 @@ class HomeViewModel: ViewModel() {
                 navController.navigate("home")
             }
                 .addOnFailureListener{
-                    Log.d("error",it.localizedMessage)
+                    it.localizedMessage?.let { it1 -> Log.d("error", it1) }
                 }
     }
 
