@@ -2,7 +2,6 @@ package com.example.padsou.layouts.home
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,7 +18,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import com.example.padsou.data.Category
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.padsou.models.HomeViewModel
 import com.example.padsou.ui.components.ShortThematicCard
 import com.example.padsou.ui.theme.*
@@ -28,9 +26,10 @@ import com.example.padsou.ui.theme.*
 @Composable
 fun ItemHome(navController: NavController){
     // Variables
-    val scrollState = rememberScrollState()
+    /*val scrollState = rememberScrollState()*/
     val viewModel = viewModel<HomeViewModel>()
     val category: State<List<Category>> = viewModel.category.collectAsState()
+
     // Content
     Column(
         modifier = Modifier
@@ -54,8 +53,6 @@ fun ItemHome(navController: NavController){
                     modifier = Modifier
                         .fillMaxWidth()
                 ) {
-
-
                     for(c in category.value){
                         var uriLo by remember {
                             mutableStateOf("")
@@ -75,7 +72,7 @@ fun ItemHome(navController: NavController){
                         }
                     }
                 }
-                LastHome(navController)
+                LastHome(/*navController*/)
             }
         }
     }

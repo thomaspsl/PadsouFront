@@ -53,7 +53,9 @@ fun ItemLogin(navComposable: NavController){
                 textButton = ItemLoginButton,
                 color = PadsouPurple,
                 routeDirection = {
-                    authViewModel.login(mail, password, navComposable)
+                    if(mail != "" && password != "") {
+                        authViewModel.login(mail, password, navComposable)
+                    }
                 }
             )
         }
