@@ -8,8 +8,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.example.padsou.data.Tips
 import com.example.padsou.layouts.addPlan.template.DescriptionAddPlan
 import com.example.padsou.layouts.addPlan.template.PictureAddPlan
+import com.example.padsou.models.HomeViewModel
 import com.example.padsou.ui.theme.PadsouLightGrey
 import com.example.padsou.ui.theme.PadsouPurple
 import com.google.accompanist.pager.ExperimentalPagerApi
@@ -21,8 +26,15 @@ import com.google.accompanist.pager.rememberPagerState
 @Composable
 fun LastAddPlan(){
     // Variables
+    val navController = rememberNavController()
+
     val pagerState = rememberPagerState()
     var stat by remember { mutableStateOf(false) }
+    var title by remember { mutableStateOf("") }
+    var desc by remember { mutableStateOf("") }
+    var link by remember { mutableStateOf("") }
+
+
 
     // Content
     HorizontalPagerIndicator(
@@ -50,7 +62,7 @@ fun LastAddPlan(){
         ) {
             when (page) {
                 0 -> { DescriptionAddPlan(pagerState) }
-                1 -> { PictureAddPlan() }
+                1 -> { PictureAddPlan(title,desc,link,navController) }
             }
         }
     }

@@ -1,5 +1,6 @@
 package com.example.padsou.layouts.addPlan.template
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,13 +13,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
+import com.example.padsou.models.HomeViewModel
 import com.example.padsou.ui.components.ShortButton
 import com.example.padsou.ui.theme.*
 
 @Composable
-fun PictureAddPlan(){
+fun PictureAddPlan(title :String = "",desc : String ="",link:String ="",navController: NavController){
     // Variables
-
+    val viewModel = viewModel<HomeViewModel>()
     // Content
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
@@ -53,6 +57,11 @@ fun PictureAddPlan(){
     ShortButton(
         textButton = LastAddPlanSecondButton,
         color = PadsouPurple,
-        routeDirection = { }
+        routeDirection = {
+            Log.e("tips",title)
+            viewModel.addTips(desc,"img.jpeg",link,title,navController)
+
+        }
+
     )
 }

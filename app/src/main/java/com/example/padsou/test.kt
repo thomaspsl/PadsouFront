@@ -23,7 +23,7 @@ import java.io.File
 
 
 @Composable
-fun Test(navController:NavController) {
+fun Test(id:String ="",navController:NavController) {
     Row(
         modifier = Modifier.background(Color.Blue)
     ) {
@@ -32,27 +32,11 @@ fun Test(navController:NavController) {
         //viewModel.addTips("ou on tire sur des gens","tire.png","shoot.fr","shoot",navController)
 
         Column() {
-            Text(text = "test")
-            Column() {
-                val launcher = rememberLauncherForActivityResult(contract = ActivityResultContracts.StartActivityForResult()) { result ->
-                    val uri = result.data?.data.toString()
-                    if(uri !== null) {
-                        val file = File(uri)
-                        val bytes = file.readBytes()
-                        //Text(text = file)
-                    }
-                }
-
-                Button(onClick = {
-                    val intent = Intent().setType("*/*").setAction(Intent.ACTION_OPEN_DOCUMENT)
-                    launcher.launch(intent)
-                }) {
-                    Text("Open file")
-                }
-            }
+            Text(text = id)
         }
 
 
     }
 }
+
 

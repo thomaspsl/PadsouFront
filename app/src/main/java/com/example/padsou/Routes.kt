@@ -17,18 +17,16 @@ fun Routes(){
     val systemController = rememberSystemUiController()
 
     // Routes
-    NavHost(navController = navController, startDestination = "home") {
+    NavHost(navController = navController, startDestination = "onboarding") {
         composable("onboarding") { MainOnboarding(systemController, navController) }
         composable("register") { MainRegister(systemController, navController) }
         composable("login") { MainLogin(systemController, navController) }
         composable("home") { MainHome(systemController, navController) }
-        composable("test") { Test(navController, /*navController*/) }
-        /*composable("test/{userId}") { backStackEntry ->
-            Test(backStackEntry.arguments?.getString("userId"),navController)
-            */
-
+        //composable("test") { Test(navController, /*navController*/) }
+        composable("plan/{planId}") { backStackEntry ->
+            backStackEntry.arguments?.getString("planId")?.let { MainPlan(it,systemController,navController) }
+        }
         composable("addPlan") { MainAddPlan(systemController, navController) }
-        composable("plan") { MainPlan(systemController, navController) }
         composable("profile") { MainProfile(systemController, navController) }
     }
 }
