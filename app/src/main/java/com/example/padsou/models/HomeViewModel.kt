@@ -2,6 +2,7 @@ package com.example.padsou.models
 
 import android.annotation.SuppressLint
 import android.util.Log
+import androidx.compose.material.Text
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.padsou.data.Category
@@ -25,7 +26,7 @@ class HomeViewModel: ViewModel() {
     private fun getTips() {
         val db = Firebase.firestore
         db.collection("plan")
-            .orderBy("order")
+            //.orderBy("order")
             .get()
             .addOnSuccessListener { result ->
                 _tips.value = result.toObjects()
@@ -50,18 +51,20 @@ class HomeViewModel: ViewModel() {
             }
     }
 
-     @SuppressLint("SuspiciousIndentation")
      fun addTips(description:String = "", image:String = "", lien:String = "", titre:String ="", navController: NavController){
-         val newTips = Tips(description,image,titre,lien,"123")
+         val randomNumber =(0..100000).random()
+         val newTips = Tips(description,image,titre,lien, Integer.toString(randomNumber))
+         navController.navigate("home")
          val db = Firebase.firestore
-
             db.collection("plan")
                 .add(newTips)
             .addOnSuccessListener{
                 navController.navigate("home")
             }
                 .addOnFailureListener{
-                    it.localizedMessage?.let { it1 -> Log.d("error", it1) }
+                    it.localizedMessage?.let { it1 -> Log.d("error", it1)
+                        navController.navigate("home")
+                    }
                 }
     }
 

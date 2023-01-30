@@ -1,6 +1,7 @@
 package com.example.padsou.layouts.home
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -61,6 +62,8 @@ fun LastHome(navComposable: NavController){
                                 .padding(bottom = 10.dp)
                                 .clip(shape = RoundedCornerShape(35.dp))
                                 .background(PadsouWhite)
+                                //.clickable { navComposable.navigate("test/${p.id}") }
+                                .clickable { navComposable.navigate("plan/${p.id}") }
                         ){
 
                         }
