@@ -8,17 +8,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import androidx.navigation.NavGraph
-import com.example.padsou.layouts.addPlan.FirstAddPlan
-import com.example.padsou.layouts.addPlan.ItemAddPlan
-import com.example.padsou.layouts.addPlan.LastAddPlan
 import com.example.padsou.layouts.bottomBarNavigation.BottomBarNavigation
+import com.example.padsou.layouts.profile.FirstProfile
+import com.example.padsou.layouts.profile.ItemProfile
+import com.example.padsou.layouts.profile.LastProfile
 import com.example.padsou.ui.theme.*
 import com.google.accompanist.systemuicontroller.SystemUiController
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun MainAddPlan(systemController: SystemUiController, navComposable: NavController) {
+fun MainProfile(systemController: SystemUiController, navComposable: NavController) {
     // Variables
     val colorWindow = PadsouPurple
 
@@ -31,9 +30,9 @@ fun MainAddPlan(systemController: SystemUiController, navComposable: NavControll
                 modifier = Modifier
                     .background(colorWindow)
             ){
-                FirstAddPlan()
-                ItemAddPlan(
-                    lastAddPlan = { LastAddPlan() }
+                FirstProfile()
+                ItemProfile(
+                    lastProfile = { LastProfile() }
                 )
             }
         },
