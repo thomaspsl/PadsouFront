@@ -22,11 +22,12 @@ fun Routes(){
         composable("register") { MainRegister(systemController, navController) }
         composable("login") { MainLogin(systemController, navController) }
         composable("home") { MainHome(systemController, navController) }
-        //composable("test") { Test(navController, /*navController*/) }
+        composable("addPlan") { MainAddPlan(systemController, navController) }
+        composable("profile") { MainProfile(systemController, navController) }
         composable("plan/{planId}") { backStackEntry ->
             backStackEntry.arguments?.getString("planId")?.let { MainPlan(it,systemController,navController) }
         }
-        composable("addPlan") { MainAddPlan(systemController, navController) }
-        composable("profile") { MainProfile(systemController, navController) }
+
+        //composable("test") { Test(navController, /*navController*/) }
     }
 }

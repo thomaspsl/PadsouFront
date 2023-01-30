@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import com.example.padsou.layouts.bottomBarNavigation.BottomBarNavigation
 import com.example.padsou.layouts.profile.FirstProfile
@@ -23,7 +22,6 @@ fun MainProfile(systemController: SystemUiController, navComposable: NavControll
 
     // Content
     systemController.setStatusBarColor(color = colorWindow, darkIcons = false)
-
     Scaffold(
         content = {
             Column(

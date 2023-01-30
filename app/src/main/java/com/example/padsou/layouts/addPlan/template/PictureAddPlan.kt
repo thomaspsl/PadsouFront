@@ -20,9 +20,10 @@ import com.example.padsou.ui.components.ShortButton
 import com.example.padsou.ui.theme.*
 
 @Composable
-fun PictureAddPlan(title :String = "",desc : String ="",link:String ="",navController: NavController){
+fun PictureAddPlan(title: String = "", desc: String = "", link: String = "", navController: NavController){
     // Variables
     val viewModel = viewModel<HomeViewModel>()
+
     // Content
     Column(
         horizontalAlignment = Alignment.CenterHorizontally

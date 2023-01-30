@@ -12,7 +12,6 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
@@ -20,9 +19,8 @@ import com.example.padsou.data.Tips
 import com.example.padsou.models.HomeViewModel
 import com.example.padsou.ui.theme.*
 
-@Preview
 @Composable
-fun LastHome(/*navComposable: NavController*/){
+fun LastHome(navComposable: NavController){
     // Variables
     val viewModel = viewModel<HomeViewModel>()
     val plans: State<List<Tips>> = viewModel.tips.collectAsState()

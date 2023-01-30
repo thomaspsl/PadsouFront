@@ -18,7 +18,6 @@ fun MainRegister(systemController: SystemUiController, navComposable: NavControl
 
     // Content
     systemController.setStatusBarColor(color = colorWindow, darkIcons = true)
-
     Column(
         verticalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier

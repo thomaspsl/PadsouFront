@@ -3,7 +3,6 @@ package com.example.padsou.layouts.home
 import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.*
 import androidx.compose.runtime.Composable
@@ -26,7 +25,6 @@ import com.example.padsou.ui.theme.*
 @Composable
 fun ItemHome(navController: NavController){
     // Variables
-    /*val scrollState = rememberScrollState()*/
     val viewModel = viewModel<HomeViewModel>()
     val category: State<List<Category>> = viewModel.category.collectAsState()
 
@@ -72,7 +70,7 @@ fun ItemHome(navController: NavController){
                         }
                     }
                 }
-                LastHome(/*navController*/)
+                LastHome(navController)
             }
         }
     }

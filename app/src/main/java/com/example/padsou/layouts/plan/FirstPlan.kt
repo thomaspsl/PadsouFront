@@ -21,6 +21,9 @@ import com.example.padsou.ui.theme.TitleIntegralBold27
 
 @Composable
 fun FirstPlan(){
+    // Variables
+
+    // Content
     Row() {
         Box(
             contentAlignment = Alignment.Center,

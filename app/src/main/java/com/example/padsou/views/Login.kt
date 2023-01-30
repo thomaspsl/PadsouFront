@@ -18,7 +18,6 @@ fun MainLogin(systemController: SystemUiController, navComposable: NavController
 
     // Content
     systemController.setStatusBarColor(color = colorWindow, darkIcons = true)
-
     Column(
         verticalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier

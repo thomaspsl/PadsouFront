@@ -14,6 +14,9 @@ import com.example.padsou.ui.theme.*
 @Preview
 @Composable
 fun FirstProfile(){
+    // Variables
+
+    // Content
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier

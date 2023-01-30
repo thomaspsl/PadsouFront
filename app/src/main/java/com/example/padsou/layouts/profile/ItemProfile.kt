@@ -8,12 +8,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import com.example.padsou.layouts.addPlan.template.DescriptionAddPlan
-import com.example.padsou.layouts.addPlan.template.PictureAddPlan
 import com.example.padsou.ui.theme.PadsouWheat
 
 @Composable
 fun ItemProfile(lastProfile: @Composable() () -> Unit){
+    // Variables
+
+    // Content
     Column() {
         Box(
             modifier = Modifier

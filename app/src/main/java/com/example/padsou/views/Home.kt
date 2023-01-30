@@ -22,7 +22,6 @@ fun MainHome(systemController: SystemUiController, navComposable: NavController)
 
     // Content
     systemController.setStatusBarColor(color = colorWindow, darkIcons = false)
-
     Scaffold(
         content = {
             Column(

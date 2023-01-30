@@ -11,6 +11,9 @@ import com.example.padsou.ui.theme.PadsouPurple
 
 @Composable
 fun LastPlan(){
+    // Variables
+
+    // Content
     Row(
         modifier = Modifier
             .fillMaxSize()

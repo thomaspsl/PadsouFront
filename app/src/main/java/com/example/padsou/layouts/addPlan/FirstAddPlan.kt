@@ -12,6 +12,9 @@ import com.example.padsou.ui.theme.*
 
 @Composable
 fun FirstAddPlan(){
+    // Variables
+
+    // Content
     Row(
         modifier = Modifier
             .padding(horizontal = 35.dp)

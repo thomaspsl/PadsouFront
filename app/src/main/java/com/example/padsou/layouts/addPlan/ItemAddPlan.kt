@@ -12,6 +12,9 @@ import com.example.padsou.ui.theme.PadsouWheat
 
 @Composable
 fun ItemAddPlan(lastAddPlan: @Composable() () -> Unit){
+    // Variables
+
+    // Content
     Column() {
         Box(
             modifier = Modifier

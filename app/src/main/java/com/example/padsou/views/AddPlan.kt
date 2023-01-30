@@ -6,9 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
-import androidx.navigation.NavGraph
 import com.example.padsou.layouts.addPlan.FirstAddPlan
 import com.example.padsou.layouts.addPlan.ItemAddPlan
 import com.example.padsou.layouts.addPlan.LastAddPlan
@@ -24,7 +22,6 @@ fun MainAddPlan(systemController: SystemUiController, navComposable: NavControll
 
     // Content
     systemController.setStatusBarColor(color = colorWindow, darkIcons = false)
-
     Scaffold(
         content = {
             Column(
