@@ -19,9 +19,9 @@ import com.example.padsou.data.Tips
 import com.example.padsou.models.HomeViewModel
 import com.example.padsou.ui.theme.*
 
-
+@Preview
 @Composable
-fun LastHome(navComposable: NavController){
+fun LastHome(/*navComposable: NavController*/){
     // Variables
     val viewModel = viewModel<HomeViewModel>()
     val plans: State<List<Tips>> = viewModel.tips.collectAsState()

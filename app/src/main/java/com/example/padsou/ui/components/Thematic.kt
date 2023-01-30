@@ -39,7 +39,7 @@ fun ShortThematicCard(color: Color, icon: AsyncImagePainter, text: String){
         Image(
             icon,
             contentDescription = null,
-            modifier = Modifier.size(128.dp)
+            modifier = Modifier.size(24.dp)
         )
     }
     Text(

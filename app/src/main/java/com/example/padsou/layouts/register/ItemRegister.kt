@@ -56,11 +56,14 @@ fun ItemRegister(navComposable: NavController){
                 textButton = ItemRegisterButton,
                 color = PadsouPurple,
                 routeDirection = {
-                    if(password == passwordConfirmed){
-                        authViewModel.register(mail,password, navComposable)
-                    }else{
-                        navComposable.navigate("register")
-                    }}
+                    if(mail != "" && password != "" && passwordConfirmed != ""){
+                        if(password == passwordConfirmed){
+                            authViewModel.register(mail,password, navComposable)
+                        }else{
+                            navComposable.navigate("register")
+                        }
+                    }
+                }
             )
         }
     }

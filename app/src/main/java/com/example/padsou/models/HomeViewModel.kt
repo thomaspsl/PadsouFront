@@ -14,18 +14,16 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 class HomeViewModel: ViewModel() {
-    private val _tips = MutableStateFlow<List<Tips>>(listOf())
-    val tips = _tips.asStateFlow()
-
     init {
         getTips()
         getCategorie()
     }
 
+    private val _tips = MutableStateFlow<List<Tips>>(listOf())
+    val tips = _tips.asStateFlow()
     private fun getTips() {
         val db = Firebase.firestore
         db.collection("plan")
-            .orderBy("order")
             .get()
             .addOnSuccessListener { result ->
                 _tips.value = result.toObjects()

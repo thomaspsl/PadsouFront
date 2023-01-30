@@ -32,7 +32,7 @@ fun MainHome(systemController: SystemUiController, navComposable: NavController)
                     .padding(top = 60.dp)
             ){
                 FirstHome()
-                ItemHome(/*navComposable*/)
+                ItemHome(navComposable)
             }
         },
         bottomBar = { BottomBarNavigation(navController = navComposable) }
