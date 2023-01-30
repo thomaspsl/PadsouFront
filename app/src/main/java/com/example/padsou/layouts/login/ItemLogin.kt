@@ -53,7 +53,6 @@ fun ItemLogin(navComposable: NavController){
                 textButton = ItemLoginButton,
                 color = PadsouPurple,
                 routeDirection = {
-                    Log.d("mail",mail)
                     authViewModel.login(mail, password, navComposable)
                 }
             )

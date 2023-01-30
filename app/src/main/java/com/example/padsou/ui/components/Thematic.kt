@@ -1,10 +1,8 @@
 package com.example.padsou.ui.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
@@ -16,11 +14,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImagePainter
 import com.example.padsou.ui.theme.LabelIntegralExtraBold11
 import com.example.padsou.ui.theme.PadsouWhite
 
 @Composable
-fun ShortThematicCard(color: Color, icon: ImageVector, text: String){
+fun ShortThematicCard(color: Color, icon: AsyncImagePainter, text: String){
     // Variables
 
     // Content
@@ -32,10 +31,15 @@ fun ShortThematicCard(color: Color, icon: ImageVector, text: String){
             .clip(shape = RoundedCornerShape(8.dp))
             .background(color)
     ){
-        Icon(
+        /*Icon(
             icon,
             tint = PadsouWhite,
             contentDescription = ""
+        )*/
+        Image(
+            icon,
+            contentDescription = null,
+            modifier = Modifier.size(128.dp)
         )
     }
     Text(

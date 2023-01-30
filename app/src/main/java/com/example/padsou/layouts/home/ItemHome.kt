@@ -1,5 +1,6 @@
 package com.example.padsou.layouts.home
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
@@ -11,9 +12,7 @@ import androidx.compose.material.icons.rounded.Notifications
 import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material.icons.rounded.ShoppingCart
 import androidx.compose.material.icons.rounded.Star
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
-import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -21,6 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import coil.compose.rememberAsyncImagePainter
 import com.example.padsou.data.Category
 import com.example.padsou.data.Tips
 import com.example.padsou.extensions.HexToJetpackColor
@@ -59,14 +59,22 @@ fun ItemHome(navController: NavController){
                         .fillMaxWidth()
                         .horizontalScroll(scrollState)
                 ) {
+
                     for(c in category.value){
+                        var uriLo by remember {
+                            mutableStateOf("")
+                        }
+                        viewModel.getPicturesOfCategoryWithNames(c.icon) { uri ->
+                            uriLo = uri
+                        }
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             modifier = Modifier.padding(end = 15.dp)
                         ) {
                             ShortThematicCard(
                                 color = HexToJetpackColor.getColor(c.color),
-                                icon = Icons.Rounded.ShoppingCart,
+                                //icon = Icons.Rounded.ShoppingCart,
+                                icon = rememberAsyncImagePainter(uriLo),
                                 text = c.thematic
                             )
                         }

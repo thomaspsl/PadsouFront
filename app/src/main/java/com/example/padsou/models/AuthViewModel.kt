@@ -21,7 +21,6 @@ fun login(email:String,password:String,navController: NavController){
                     val user = Firebase.auth.currentUser
                     Log.d("user","Identifiant : {${user?.uid}}")
                     navController.navigate("home")
-
                     //updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
@@ -29,7 +28,6 @@ fun login(email:String,password:String,navController: NavController){
                     //updateUI(null)
                 }
             }
-
 }
 /**/
 
