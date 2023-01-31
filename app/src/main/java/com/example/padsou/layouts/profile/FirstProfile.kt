@@ -47,7 +47,7 @@ fun FirstProfile(){
                 contentDescription = "",
                 modifier = Modifier
                     .size(50.dp)
-                )
+            )
         }
     }
 }

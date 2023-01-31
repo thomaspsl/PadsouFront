@@ -14,6 +14,11 @@ val CaptionInterMedium15 = TextStyle(
     fontWeight = FontWeight.Medium,
     fontSize = 15.sp
 )
+val ComInterMedium14 = TextStyle(
+    fontFamily = fontsInter,
+    fontWeight = FontWeight.Medium,
+    fontSize = 14.sp
+)
 val ButtonIntegralBold15 = TextStyle(
     fontFamily = fontsIntegralCF,
     fontWeight = FontWeight.Bold,
@@ -48,4 +53,14 @@ val LabelIntegralExtraBold11 = TextStyle(
     fontFamily = fontsIntegralCF,
     fontWeight = FontWeight.ExtraBold,
     fontSize = 11.sp,
+)
+val LabelInterBold12 = TextStyle(
+    fontFamily = fontsInter,
+    fontWeight = FontWeight.Bold,
+    fontSize = 12.sp,
+)
+val LabelInterMedium10 = TextStyle(
+    fontFamily = fontsInter,
+    fontWeight = FontWeight.Medium,
+    fontSize = 10.sp,
 )
