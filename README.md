@@ -3,7 +3,6 @@
 2. [Réalisation](#réalisation)
 3. [Projet](#projet)
 
-
 ### Outil
 Dans le cas de notre projet Padsou, nous avons utilisé comme language de programmation le jetpack compose.
 Nous utilisions comme éditeur AndroidStudio, et comme databases FireBases.
