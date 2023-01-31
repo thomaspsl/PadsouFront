@@ -2,6 +2,7 @@ package com.example.padsou.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+val PadsouYellow = Color(0xffFFC107)
 val PadsouSalmon = Color(0xffF4696A)
 val PadsouPink = Color(0xffF9709C)
 val PadsouBlue = Color(0xff579BFE)

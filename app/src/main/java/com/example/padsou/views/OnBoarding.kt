@@ -18,7 +18,6 @@ fun MainOnboarding(systemController: SystemUiController, navComposable: NavContr
 
     // Content
     systemController.setStatusBarColor(color = colorWindow, darkIcons = false)
-
     Column(
         verticalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier

@@ -25,6 +25,7 @@ class HomeViewModel: ViewModel() {
     private fun getTips() {
         val db = Firebase.firestore
         db.collection("plan")
+            .orderBy("id")
             .get()
             .addOnSuccessListener { result ->
                 _tips.value = result.toObjects()

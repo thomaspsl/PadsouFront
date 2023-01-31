@@ -31,14 +31,9 @@ fun ShortThematicCard(color: Color, icon: AsyncImagePainter, text: String){
             .clip(shape = RoundedCornerShape(8.dp))
             .background(color)
     ){
-        /*Icon(
-            icon,
-            tint = PadsouWhite,
-            contentDescription = ""
-        )*/
         Image(
             icon,
-            contentDescription = null,
+            contentDescription = "",
             modifier = Modifier.size(24.dp)
         )
     }

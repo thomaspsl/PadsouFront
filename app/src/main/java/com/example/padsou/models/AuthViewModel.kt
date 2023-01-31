@@ -2,8 +2,11 @@ package com.example.padsou.models
 
 import android.content.ContentValues.TAG
 import android.util.Log
+import androidx.compose.ui.platform.LocalContext
+import androidx.core.app.NotificationCompat
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
+import com.example.padsou.R
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -19,11 +22,12 @@ class AuthViewModel: ViewModel() {
                 val user = Firebase.auth.currentUser
                 Log.d("user","Identifiant : {${user?.uid}}")
                 navController.navigate("home")
+
             }
         }
     }
     // Auto Login
-    fun autologin(auth: String, navController: NavController): String {
+    /*fun autologin(auth: String, navController: NavController): String {
         return if(auth != ""){
             // Sign in success, update UI with the signed-in user's information
             Log.d("user","Identifiant : {${auth}}")
@@ -35,7 +39,7 @@ class AuthViewModel: ViewModel() {
             "onBoarding"
             //updateUI(null)
         }
-    }
+    }*/
 
     // Register
     fun register(mail:String,password:String,navController: NavController){
@@ -46,10 +50,6 @@ class AuthViewModel: ViewModel() {
                 navController.navigate("login")
 
                 //updateUI(user)
-            } else {
-                // If sign in fails, display a message to the user.
-                Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                //updateUI(null)
             }
         }
     }

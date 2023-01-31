@@ -71,7 +71,11 @@ fun DescriptionAddPlan(pagerState: PagerState){
         ShortButton(
             textButton = LastAddPlanFirstButton,
             color = PadsouPurple,
-            routeDirection = { coroutineScope.launch { pagerState.animateScrollToPage(page = pagerState.currentPage + 1) } }
+            routeDirection = {
+                if(title != "" && desc != "" && link != ""){
+                    coroutineScope.launch { pagerState.animateScrollToPage(page = pagerState.currentPage + 1) }
+                }
+            }
         )
     }
 }

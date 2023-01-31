@@ -1,22 +1,17 @@
 package com.example.padsou.layouts.home
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
-import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.padsou.data.Tips
 import com.example.padsou.models.HomeViewModel
+import com.example.padsou.ui.components.ShortPlanCard
 import com.example.padsou.ui.theme.*
 
 @Composable
@@ -50,21 +45,17 @@ fun LastHome(navComposable: NavController){
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
                 userScrollEnabled = true,
                 modifier = Modifier
-                    .fillMaxSize()
+                    .fillMaxSize(),
             ) {
                 for(p in plans.value){
                     item {
-                        Box(
-                            modifier = Modifier
-                                .height(160.dp)
-                                .padding(bottom = 10.dp)
-                                .clip(shape = RoundedCornerShape(35.dp))
-                                .background(PadsouWhite)
-                                //.clickable { navComposable.navigate("test/${p.id}") }
-                                .clickable { navComposable.navigate("plan/${p.id}") }
-                        ){
+                        var uriLo by remember { mutableStateOf("") }
 
+                        viewModel. getPicturesOfTipsWithNames(p.image) { uri ->
+                            uriLo = uri
                         }
+
+                        ShortPlanCard(navComposable, p, uriLo)
                     }
                 }
             }

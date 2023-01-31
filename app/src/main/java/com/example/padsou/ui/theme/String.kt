@@ -42,6 +42,10 @@ const val LastAddPlanFirstButton = "Suivant"
 const val LastAddPlanLabelPicture = "Photo du bon plan"
 const val LastAddPlanSecondButton = "Ajouter ce bon plan"
 
+const val ItemPlanLabelPropose = "Proposé par"
+const val ItemPlanContentCom = "Chaque année, O’Tacos veut vous mettre bien. On sait que t’es étudiant et que c’est la galère, alors on t’a prévu des giga MAXI TACOS à des giga BAS PRIX. Ca se passe maintenant !"
+const val LastPlanButton = "Profiter de l'offre"
+
 const val FirstProfileTitle = "Mon Profil"
 const val FirstProfileSubTitle = "Modifie tes infos affichées aux autres sur l’app"
 const val LastProfileLabelPseudo = "Mon pseudo"

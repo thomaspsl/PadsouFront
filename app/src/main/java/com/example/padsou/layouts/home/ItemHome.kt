@@ -52,9 +52,8 @@ fun ItemHome(navController: NavController){
                         .fillMaxWidth()
                 ) {
                     for(c in category.value){
-                        var uriLo by remember {
-                            mutableStateOf("")
-                        }
+                        var uriLo by remember { mutableStateOf("") }
+
                         viewModel.getPicturesOfCategoryWithNames(c.icon) { uri ->
                             uriLo = uri
                         }
