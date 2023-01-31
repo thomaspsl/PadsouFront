@@ -5,7 +5,7 @@
 4. [Projet](#projet)
 
 ## Screen
-<img src="https://user-images.githubusercontent.com/84765571/215706679-6cd737a8-3761-4c16-9d59-fcef8d20249d.jpg" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/84765571/215706679-6cd737a8-3761-4c16-9d59-fcef8d20249d.jpg" width=75% height=75%>
 
 ## Outil
 Dans le cas de notre projet Padsou, nous avons utilisé comme language de programmation le jetpack compose.
