@@ -1,10 +1,11 @@
 <h1 align="center">
-  <a href="https://www.padsou.fr"><img src="https://user-images.githubusercontent.com/84765571/216450437-06062698-e898-48c6-9433-91000997c8d3.png" alt="padsou" width="175"></a>
+  <a href="https://www.padsou.fr"><img src="https://user-images.githubusercontent.com/84765571/216453452-7d9f54a8-593f-4579-bc8a-623c4904c9d7.png" alt="padsou" width="175"></a>
   <br>
   Padsou Project
   <br>
 </h1>
 <!--<h4 align="center">It's a web portfolio for introducing myself a little bit built with <a href="https://fr.reactjs.org/" target="_blank">React Native</a>.</h4>
+      <img src="https://user-images.githubusercontent.com/84765571/216450437-06062698-e898-48c6-9433-91000997c8d3.png" alt="padsou" width="175"></a>
 <p align="center">
   <a href="https://fr.reactjs.org/">
     <img src="https://img.shields.io/badge/React-18.2-5ED3F3" alt="React">
@@ -81,7 +82,7 @@ description sur le bon plan choisi. -->
 
 
 ## How To Use
-To clone and run this application, you'll need [Git](https://git-scm.com) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) <!--(which comes with [npm](http://npmjs.com))--> installed on your computer. From your command line:
 ```bash
 # Clone this repository
 $ git clone https://github.com/thomaspsl/Padsou
