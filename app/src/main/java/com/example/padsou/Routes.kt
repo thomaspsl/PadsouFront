@@ -27,7 +27,5 @@ fun Routes(){
         composable("plan/{planId}") { backStackEntry ->
             backStackEntry.arguments?.getString("planId")?.let { MainPlan(it,systemController,navController) }
         }
-
-        //composable("test") { Test(navController, /*navController*/) }
     }
 }
