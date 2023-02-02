@@ -100,7 +100,7 @@ $ ...
 
 
 ## Key Features
-<!-- - Here are the [specifications](https://docs.google.com/document/d/1oKFBFMdzPc6vugmCzuZRecUAnHZ71xbI/edit?rtpof=true) -->
+- Here are the [specifications](https://lesignobles.notion.site/Le-projet-Android-a13a07eacb3644c898b16b26ad4b6de5)
 
 
 
