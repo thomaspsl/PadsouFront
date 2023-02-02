@@ -1,10 +1,10 @@
-<h1 align="center"><p></p><p></p>
-  <a href="https://www.thomaspsl.fr"><img src="https://user-images.githubusercontent.com/84765571/216166816-aa52913c-abfd-453f-8dbf-962a5d147531.png" alt="thomaspsl" width="175"></a>
-  <br><p></p>
+<h1 align="center">
+  <a href="https://www.padsou.fr"><img src="https://user-images.githubusercontent.com/84765571/216450437-06062698-e898-48c6-9433-91000997c8d3.png" alt="padsou" width="175"></a>
+  <br>
   Padsou Project
   <br>
 </h1>
-<h4 align="center">It's a web portfolio for introducing myself a little bit built with <a href="https://fr.reactjs.org/" target="_blank">React Native</a>.</h4>
+<!--<h4 align="center">It's a web portfolio for introducing myself a little bit built with <a href="https://fr.reactjs.org/" target="_blank">React Native</a>.</h4>
 <p align="center">
   <a href="https://fr.reactjs.org/">
     <img src="https://img.shields.io/badge/React-18.2-5ED3F3" alt="React">
@@ -23,7 +23,7 @@
   <a href="https://www.typescriptlang.org/">
     <img src="https://img.shields.io/badge/TS-4.8-3178C6" alt="TS">
   </a>
-</p>
+</p>-->
 <p align="center">
   <a href="#contributors">Contributors</a> •
   <a href="#description">Description</a> •
@@ -37,7 +37,7 @@
 
 
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+<!-- ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif) -->
 
 
 
