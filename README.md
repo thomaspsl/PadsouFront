@@ -59,8 +59,8 @@ $ git clone https://github.com/thomaspsl/Padsou
 # Go into the repository
 $ cd Padsou
 
-# Install dependencies
-$ ...
+# Install dependencies (sync gradle)
+$ ./gradlew
 
 # Run the app
 $ ...
