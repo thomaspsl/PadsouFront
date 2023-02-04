@@ -4,8 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.padsou.models.AuthViewModel
 import com.example.padsou.views.*
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
