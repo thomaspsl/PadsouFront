@@ -51,7 +51,7 @@
 
 
 ## 🚀 How To Use
-To clone and run this application, you'll need [Git](https://git-scm.com) <!--(which comes with [npm](http://npmjs.com))--> installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer. From your command line:
 ```bash
 # Clone this repository
 $ git clone https://github.com/thomaspsl/Padsou
@@ -59,11 +59,11 @@ $ git clone https://github.com/thomaspsl/Padsou
 # Go into the repository
 $ cd Padsou
 
-# Install dependencies (sync gradle)
-$ ./gradlew
+# Build the project
+$ ./gradlew assembleDebug
 
-# Run the app
-$ ...
+# Install the app
+$ adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
 
