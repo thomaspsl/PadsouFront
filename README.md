@@ -48,7 +48,7 @@
 
 ## 📚 Description
 The project consists in the realization of a new mobile application for students who are financially restricted. You can find good plans to eat, to go to the gym or to find small student jobs. In the context of our project, we divided the tasks, one was in charge of all the Front-End part, while the
-the other one was in charge of the Back-End part. This arrangement of work allowed that no one could encroach on the work of the other, since we didn't work on the same part. Each of us had a development branch that we tried to synchronize every middle of the day to establish the progress of the project and the upcoming goals.
+the other one was in charge of the Back-End part. This arrangement of work allowed that no one could encroach on the work of the other. Each of us had a development branch that we tried to synchronize every middle of the day to establish the progress of the project and the upcoming goals.
 
 
 
