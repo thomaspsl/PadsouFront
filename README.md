@@ -36,7 +36,7 @@
 
 
 <!-- ## GIF -->
-... <!-- ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif) -->
+![screenshot](https://user-images.githubusercontent.com/84765571/216818966-52042eea-f76c-4d5b-90c8-6d8f12369aa5.png)
 
 
 
