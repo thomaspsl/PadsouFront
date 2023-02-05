@@ -81,11 +81,19 @@ Padsou is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if 
 
 
 ## ✨ Credits
-- ...
-
-- ...
-
-- ...
+-   <a href="https://developer.android.com/jetpack/compose">
+        <img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4.svg?style=for-the-badge&logo=Jetpack-Compose&logoColor=white" height="20" alt="Jetpack%20Compose">
+    </a>  
+    <a href="https://firebase.google.com/">
+        <img src="https://img.shields.io/badge/Firebase-FFCA28.svg?style=for-the-badge&logo=Firebase&logoColor=black" height="20" alt="Firebase">
+    </a>
+    
+-   <a href="https://github.com/google/accompanist">
+        <img src="https://img.shields.io/badge/Accompanist-3D3E3F.svg?style=for-the-badge&logo=Google-Cloud&logoColor=white" height="20" alt="Accompanist">
+    </a>
+    <a href="https://github.com/google/ExoPlayer">
+        <img src="https://img.shields.io/badge/ExoPlayer-A32055.svg?style=for-the-badge&logo=Google-Cloud&logoColor=white" height="20" alt="ExoPlayer">
+    </a>
 
 
 
