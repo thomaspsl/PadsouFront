@@ -42,7 +42,7 @@
 
 
 ## 👨‍🎓 Contributors
-![GitHub Contributors Image](https://contrib.rocks/image?repo=thomaspsl/Padsou)
+![GitHub Contributors Image](https://contrib.rocks/image?repo=thomaspsl/PadsouFront)
 
 
 
