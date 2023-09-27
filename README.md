@@ -111,6 +111,6 @@ MIT
 
 ---
 
-> GitHub [@Padsou](https://github.com/thomaspsl/Padsou) -
+> GitHub [@Padsou](https://github.com/thomaspsl/PadsouFront) -
 > Instagram [@Padsou](https://www.instagram.com) - 
 > Twitter [@Padsou](https://twitter.com)
