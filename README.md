@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://www.padsou.fr"><img src="https://user-images.githubusercontent.com/84765571/216453452-7d9f54a8-593f-4579-bc8a-623c4904c9d7.png" alt="padsou" width="155"></a>
   <br>
-  Padsou Project
+  Padsou Project (Front End)
   <br>
 </h1>
 
@@ -55,10 +55,10 @@ The project consists in the realization of a new mobile application for students
 To clone and run this application, you'll need [Git](https://git-scm.com) installed on your computer. From your command line:
 ```bash
 # Clone this repository
-$ git clone https://github.com/thomaspsl/Padsou
+$ git clone https://github.com/thomaspsl/PadsouFront
 
 # Go into the repository
-$ cd Padsou
+$ cd PadsouFront
 
 # Build the project
 $ ./gradlew assembleDebug
